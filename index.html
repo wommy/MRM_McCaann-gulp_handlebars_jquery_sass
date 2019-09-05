@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.hello-world {
+			background-color: lightgray;
+			padding: 0.5rem;
+			border: 1px solid black;
+		}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+	<div id="output">
+	</div>
+	<script>
+		const templateString = `
+			<div class="hello-world">
+				<b>Hello {{name}}</b>
+			</div>
+		`
+
+		const templateFunction = Handlebars.compile(templateString)
+		const htmlOutput = templateFunction({name: 'butts'})
+
+		document.getElementById('output').innerHTML = htmlOutput;
+	</script>
+</body>
+</html>
