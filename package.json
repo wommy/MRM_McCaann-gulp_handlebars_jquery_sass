@@ -6,10 +6,14 @@
   "author": "wommy <tom@technomad.media>",
   "license": "MIT",
   "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
     "browser-sync": "^2.26.7",
     "node-sass": "^4.12.0"
   },
-	"scripts": {
-		"style": "node-sass _style/ -o _static/style/"
-	}
+  "scripts": {
+    "style": "node-sass sass/ -o _static/style/",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "title": "MRM-McCann build tool stack"
 }
